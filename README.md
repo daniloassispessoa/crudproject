@@ -26,8 +26,12 @@ npm i express morgan nodemon ejs body-parser dotenv mongoose axios
 SERVER
 ============================================================================================================
 
-The path is configured at the PORT 3000:
+#The path is configured at the PORT 3000:
 
 http://localhost:3000/
 
-You can change this configuration PORT at config.env
+#You can change this configuration PORT at config.env
+
+#To run the server type on terminal
+
+npm start

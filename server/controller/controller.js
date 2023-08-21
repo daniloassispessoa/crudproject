@@ -86,7 +86,7 @@ exports.update = (req,res)=>{
 
 }
 
-// delete a user with specified user id in the request
+// delete a user with specified user id in the request.
 exports.delete = (req,res)=>{
 
     const id = req.params.id;
