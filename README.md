@@ -12,15 +12,15 @@ HOW TO INSTALL
 
 #On terminal type de command git clone>>
 
-git clone https://github.com/daniloassispessoa/crudproject.git
+>>git clone https://github.com/daniloassispessoa/crudproject.git
 
 #go to the folder crudproject>>
 
-cd crudproject
+>>cd crudproject
 
 #if is necessary install morgan nodemon ejs bodyparser dotenv mongoose axios >>
 
-npm i express morgan nodemon ejs body-parser dotenv mongoose axios
+>>npm i express morgan nodemon ejs body-parser dotenv mongoose axios
 
 ============================================================================================================
 SERVER
@@ -34,4 +34,4 @@ http://localhost:3000/
 
 #To run the server type on terminal
 
-npm start
+>>npm start
