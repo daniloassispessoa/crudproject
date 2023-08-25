@@ -285,6 +285,15 @@ thead{
         border: none;
         position: relative;
     }
+    
+    #header .container{
+        margin: 0 0 0 2em;
+    }
+    #site-main .container .box-nav>a{
+
+        margin: 0 0 0 1em;        
+
+    }
 }
 
 /* add_user & update user template*/
