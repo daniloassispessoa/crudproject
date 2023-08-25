@@ -6,11 +6,11 @@
     <td><%=users[writer].gender %></td>
     <td><%=users[writer].status %></td>
     <td>
-        <a href="/update-user?id=<%=users[writer]._id%>" class="btn border-shadow update">
-            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+        <a href="/update-user?id=<%=users[writer]._id%>" class="btn border-alt-user update">
+            <span class="text-gradient"><i class="fa-solid fa-pen"></i></span>
         </a>
-        <a class="btn border-shadow delete" data-id=<%=users[writer]._id%>>
-            <span class="text-gradient"><i class="fas fa-times"></i></span>
+        <a class="btn border-del-user delete" data-id=<%=users[writer]._id%>>
+            <span class="text-gradient"><i class="fa-solid fa-xmark"></i></span>
         </a>
     </td>
 </tr> 

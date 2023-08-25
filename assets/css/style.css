@@ -1,10 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=PT+Sans&display=swap');
 
 :root{
-    --dark:#2b2d42;
-    --light:#adafc5;
-    --border:#d7f0ea;
-    --border-btn:#d8f7ef;
+    --header-footer-nav-from: #e4e3e6;   
+    --header-footer-nav-to: #dddddd;   
+    --header-footer-nav-solid: #dddddd;   
+    --header-footer-nav-border: #e4e3e6;   
+    --header-logo-title:#0b041d;
+    --footer-txt:#0b041d;
+    --table-header:#dddddd;
+    --table-row-hover:#f6eefd;
+    --table-txt-header:#0b041d;
+    --table-txt-row:#0b041d;
+    --table-txt-border:#e4e3e6;
+    --table-tr-border:#f6eefd;
+    --btn-txt-from:#0a0024;
+    --btn-txt-to:#3f007a;
+    --btn-txt-solid:#0a0024;
+    --btn-add-bg:#9161be;
+    --btn-add-bg-hover:#8b53c0;
+    --btn-add-bg-border:#7b53a1;
+    --btn-alt-bg:#6dc975;
+    --btn-alt-bg-hover:#5fb967;
+    --btn-alt-bg-border:#6dc975;
+    --btn-del-bg:#e27585;
+    --btn-del-bg-hover:#d16273;
+    --btn-del-bg-border:#e27585;
+    --btn-save-bg:#9161be;
+    --btn-save-bg-hover:#5d3583;
+    --btn-save-bg-border:#8257aa;
+    --btn-save-txt-hover:#efdeff;
+    --form-txt:#0b041d;
+    --form-input:#e4e3e6;
+    --form-input-active:#c4a6e2;
+    --form-input-border:#dacbe9;
+    --radius-border:#F4F9F9;
+    --radius-select:#9161be;
+    --radius-bg:#e4e3e6;
+
 }
 
 *{
@@ -16,17 +48,41 @@
 a{
     text-decoration: none;
     font-family: 'PT Sans', sans-serif;
+    
+}
+p{
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+}
+
+
+.logo{
+
+    max-width: 3.33%;
+    margin-right: 10px;
+    min-width: 33px;
+    
+}
+
+
+.txt-logo{
+    
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .container{
     max-width: 1024px;
     margin: auto;
+    
 }
 
+
 .nav-brand{
-    font-size: 1.5em;
+    font-size: 150%;
     font-weight: bold;
-}
+    
+    }
 
 .d-flex{
     display: flex;
@@ -41,39 +97,87 @@ a{
     text-align: center;
 }
 
-.border-shadow{
-    border: 1px solid var(--border-btn);
-    box-shadow: 1px 3px 10px #e2f7f1;
+.text-left{
+    width: 100%;
+    text-align: left;
+    
 }
 
-.text-dark{
-    color: var(--dark);
+.valing{
+    
+    display: table;    
+}
+
+
+
+.border-add-user{
+
+    border: 1px solid var(--btn-add-bg-border);
+
+}
+.border-alt-user{
+
+    border: 1px solid var(--btn-alt-bg-border);
+
+}
+.border-del-user{
+
+    border: 1px solid var(--btn-del-bg-border);
+
 }
 
 .inline{
     display: inline-block;
 }
 
-.text-light{
-    color: var(--light);
+.text-header-nav{
+    color: var(--header-logo-title);
+}
+.text-footer-nav{
+    color: var(--footer-txt);
+}
+.text-form{
+    color: var(--form-txt);
 }
 
 .text-gradient{
-    background: linear-gradient(to right, #898c97, #3b1fda);
+    background: linear-gradient(to right, var(--btn-txt-from), var(--btn-txt-to));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 #header nav{
-    background-color: #06d6a0;
+    background: linear-gradient(to top, var(--header-footer-nav-from), var(--header-footer-nav-to));
     padding: 1em 0;
     width: 100%;
+    border-bottom: var(--header-footer-nav-border);
+}
+
+#footer nav{
+    background: linear-gradient(to top, var(--header-footer-nav-from), var(--header-footer-nav-to));
+    padding: 1em 0;
+    width: 100%;
+    height: 100px;
+    border-bottom: var(--header-footer-nav-border);
+    position: absolute;
+    margin-top: 100px;
+    bottom: 0;
+    
+}
+#footer .container{
+    font-family: 'Barlow', sans-serif;
+    font-size: smaller;
+}
+
+#header .container{
+    margin: 0 0 0 5em;
 }
 
 #site-main{
     margin-top: 6em;
     font-family: 'Barlow', sans-serif;
+    
 }
 
 #site-main .container .box-nav>a{
@@ -87,34 +191,81 @@ a{
 
 table{
     border-spacing: 0px;
-    width: 100%;
+    width: 100%;       
 }
+
+tbody{
+    display: block;
+    max-height: 500px;
+    overflow: auto;
+}
+
+thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+thead{
+    width: calc(100% - 1em);
+}
+
 
 .table td, .table th{
     padding: .75em;
     vertical-align: top;
     text-align: center;
-    border-top: 1px solid var(--border);
+    border-top: 1px solid var(--table-txt-border);    
 }
 
 .table td>a.btn{
     padding:  .3em 1em;
     font-size: 1.1em;
     margin: 0 .2em;
+    border-radius: 5em;
+
+}
+
+.delete{
+    background-color: var(--btn-del-bg);
+}
+.update{
+    background-color: var(--btn-alt-bg);
+}
+
+.delete:hover{
+    background-color: var(--btn-del-bg-hover);
+}
+.update:hover{
+    background-color: var(--btn-alt-bg-hover);
+}
+
+.add-span{
+
+    border-radius: 5em;
+    background-color: var(--btn-add-bg);
+
+}
+
+
+.add-span:hover{
+    background-color: var(--btn-add-bg-hover);
+
 }
 
 .table tr:hover{
-    background-color: #06d6a0;
+    background-color: var(--table-row-hover);
 }
 
 .table tr:hover td>a{
     box-shadow:none ;
 }
 
-.table .thead-dark th{
-    color: #fff;
-    background-color: var(--dark);
-    border-color: #32383e;
+
+.table .table-thead th{
+    color: var(--table-txt-header);
+    background-color: var(--table-header);
+    border-color: var(--table-txt-border);
 }
 
 @media only screen and (max-width: 1024px){
@@ -128,7 +279,7 @@ table{
         left:-9999px;
     }
 
-    tr{ border: 1px solid var(--border);}
+    tr{ border: 1px solid var(--table-tr-border);}
 
     td{
         border: none;
@@ -162,10 +313,18 @@ table{
     width: 100%;
     padding: .6em 1em;
     margin: .5em 0;
-    border: 1px solid var(--border);
+    border: 1px solid var(--form-input-border);
     font-family: 'Barlow', sans-serif;
     font-size: 1em;
     border-radius: .2em;
+}
+
+#update_user .form-group input[type="text"],
+#add_user .form-group input[type="text"]:focus{
+
+    outline-color: var(--form-input-active);
+     
+    
 }
 
 #update_user .form-group .radio,
@@ -182,9 +341,9 @@ table{
 
 .radio input[type='radio'] + .radio-label:before{
     content: "";
-    background: var(--border-btn);
+    background: var(--radius-bg);
     border-radius: 100%;
-    border: 1px solid var(--border);
+    border: 1px solid var(--radius-border);
     display: inline-block;
     width: 1em;
     height: 1em;
@@ -199,26 +358,26 @@ table{
 }
 
 .radio input[type='radio']:checked + .radio-label:before{
-    background-color: #16db93;
-    box-shadow: inset 0 0 0 4px #e9ecef;
+    background-color: var(--radius-select);
+    box-shadow: inset 0 0 0 4px var(--radius-border);
 }
 
 .radio input[type='radio']:focus + .radio-label:before{
     outline: none;
-    border-color: #16db93;
+    border-color: var(--radius-border);
 }
 
 .radio input[type='radio']:disabled + .radio-label:before{
-    box-shadow: inset 0 0 0 4px #e9ecef;
-    border-bottom: #b4b4b4;
-    background: #b4b4b4;
+    box-shadow: inset 0 0 0 4px var(--radius-border);
+    border-bottom: var(--radius-border);
+    background: var(--radius-bg);
 }
 #update_user .form-group .btn,
 #add_user .form-group .btn{
 
     width: 100%;
     padding: .9em 1em;
-    background-color: #16db93;
+    background-color: var(--btn-save-bg);
     border: none;
     font-family: 'PT Sans', sans-serif;
     font-size: 1em;
@@ -230,6 +389,7 @@ table{
 
 #update_user .form-group .btn:hover,
 #add_user .form-group .btn:hover{
-    background-color: var(--dark);
-    color: var(--border);
+    background-color: var(--btn-save-bg-hover);
+    color: var(--btn-save-txt-hover);
+
 }
